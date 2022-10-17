@@ -1,0 +1,54 @@
+
+
+<MenuWidget>:
+    canvas.before:
+        Color:
+            rgba: 0,0,0,.7
+        Rectangle:
+            size: self.size
+    Label:
+        font_size: dp(60)
+        font_name:'fonts/BroadcastTitling.ttf'
+        text: root.parent.menu_title
+        pos_hint: {"center_x":.5,"centre_y":.6}
+        theme_text_color:"Custom"
+        text_color:(.2,.3,1,1)
+    Button:
+        font_size: dp(30)
+        font_name:'fonts/From Cartoon Blocks.ttf'
+        text: root.parent.menu_title_btn
+        pos_hint: {"center_x":.5, "centre_y":.4}
+        size_hint: .2, .1
+        on_press: root.parent.on_menu_button_press()
+        background_color: .2, .3, 1,1
+    BoxLayout:
+        orientation:"vertical"
+        size_hint: .2,.3
+        pos_hint:{"center_x":.82,"center_y":.2}
+        Button:
+            text:"Hard"
+            background_color: .2, .3, .7,0
+            on_press:root.parent.User_speed(self)
+            font_size: dp(19.5)
+            font_name:'fonts/orange juice 2.0.ttf'
+        Button:
+            text:"Medium"
+            background_color: .2, .3, .6,0
+            on_press:root.parent.User_speed(self)
+            font_size: dp(19.5)
+            font_name:'fonts/orange juice 2.0.ttf'
+        Button:
+            text:"Easy"
+            background_color: .2, .3, .7,0
+            on_press:root.parent.User_speed(self)
+            font_size: dp(19.5)
+            font_name:'fonts/orange juice 2.0.ttf'
+    Label:
+        text:root.parent.high_score_txt
+        font_size: dp(24)
+        font_name:'fonts/orange juice 2.0.ttf'
+        size_hint: .2, .2
+        pos_hint:{"x":.05,"y":.1}
+        bg_color: .4,.5,.9,1
+
+

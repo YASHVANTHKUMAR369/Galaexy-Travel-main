@@ -1,0 +1,20 @@
+#:import menu menu
+
+MainWidget:
+
+<MainWidget>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source:root.bg_title
+    menu_widget: menu_widget
+    perspective_point_x: self.width/2
+    perspective_point_y: self.height*0.75
+    Label:
+        text:root.score_txt
+        font_size: dp(24)
+        font_name:'fonts/orange juice 2.0.ttf'
+        size_hint: .2, .2
+        pos_hint:{"x":0,"top": 1}
+    MenuWidget:
+        id: menu_widget
